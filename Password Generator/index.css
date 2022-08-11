@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #1c1c1c;
+}
+
 h3 {
   font-family: "Karla", sans-serif;
   font-weight: 800;

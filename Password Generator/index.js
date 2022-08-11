@@ -96,9 +96,9 @@ firstPass = document.getElementById("first-pass");
 secondPass = document.getElementById("second-pass");
 
 function generatePass() {
-    firstPass.textContent = "";
-    secondPass.textContent = "";
-    for (let i = 0; i < 15; i++) {
+  firstPass.textContent = "";
+  secondPass.textContent = "";
+  for (let i = 0; i < 15; i++) {
     let generate = Math.floor(Math.random() * characters.length);
     randomOnePass = characters[generate];
     firstPass.textContent += randomOnePass;
