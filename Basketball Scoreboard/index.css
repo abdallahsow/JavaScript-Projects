@@ -23,7 +23,19 @@
   color: #eee;
 }
 
-.score {
+#home-score {
+  font-family: 'Cursed Timer ULiL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 127px;
+  color: #F94F6D;
+  background-color: black;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+#guest-score {
   font-family: 'Cursed Timer ULiL';
   font-style: normal;
   font-weight: 400;
@@ -55,4 +67,5 @@
     border-radius: 5px;
     width: 45px;
     height: 45px;
+    cursor: pointer;
 }
