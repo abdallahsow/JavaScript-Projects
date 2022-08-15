@@ -99,10 +99,10 @@ function generatePass() {
   firstPass.textContent = "";
   secondPass.textContent = "";
   for (let i = 0; i < 15; i++) {
-    let generate = Math.floor(Math.random() * characters.length);
-    randomOnePass = characters[generate];
+    Math.floor(Math.random() * characters.length);
+    randomOnePass = characters[Math.floor(Math.random() * characters.length)];
     firstPass.textContent += randomOnePass;
-    randomTwoPass = characters[generate];
+    randomTwoPass = characters[Math.floor(Math.random() * characters.length)];
     secondPass.textContent += randomTwoPass;
   }
 }

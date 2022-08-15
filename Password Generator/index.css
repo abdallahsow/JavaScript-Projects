@@ -8,7 +8,7 @@ body {
   background-color: #1c1c1c;
 }
 
-h3 {
+.app-guide {
   font-family: "Karla", sans-serif;
   font-weight: 800;
   font-size: 40px;
@@ -16,7 +16,7 @@ h3 {
   color: #fff;
 }
 
-span {
+.side-style {
   color: #4adf86;
 }
 
@@ -36,7 +36,7 @@ span {
   margin-top: 10px;
 }
 
-button {
+.pass-btn {
   border-radius: 6px;
   padding: 9px 17px 9px 15px;
   background-color: #10b981;
@@ -51,7 +51,7 @@ button {
   cursor: pointer;
 }
 
-rect {
+.password {
   background: #273549;
   border-radius: 6px;
   height: 40px;
@@ -71,7 +71,7 @@ rect {
   gap: 25px;
 }
 
-hr {
+.hori-box {
   border: none;
   border-top: 1px solid #2f3e53;
 }
