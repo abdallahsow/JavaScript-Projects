@@ -35,6 +35,9 @@
   width: 120px;
   height: 90px;
   margin: auto;
+  background: none;
+  text-align: center;
+  outline: none;
 }
 
 .convert-btn {
