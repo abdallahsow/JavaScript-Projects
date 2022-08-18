@@ -58,7 +58,3 @@ function convert(field, measure, convRate, unit1, unit2) {
   const conv2 = conversion2.toFixed(3);
   measure.innerHTML = `${num} ${unit1} = ${conv1} ${unit2} | ${num} ${unit2} = ${conv2} ${unit1}`;
 }
-
-// if (num !== /^0-9/) {
-//   alert("Please enter a number");
-// }
