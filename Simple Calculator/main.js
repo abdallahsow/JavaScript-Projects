@@ -6,7 +6,7 @@ const subTerm = "Diff: ";
 const prodTerm = "Prod: ";
 const divTerm = "Qt: ";
 
-function Operation(type, Term) {
+const operation = (type) => {
   let num1 = document.getElementById("num1-el").value;
   let num2 = document.getElementById("num2-el").value;
   let firstTerm = Number(num1);
@@ -24,4 +24,4 @@ function Operation(type, Term) {
     finalResult = firstTerm / secondTerm;
     resultEl.textContent = divTerm + finalResult;
   }
-}
+};
