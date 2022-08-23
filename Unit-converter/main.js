@@ -20,14 +20,6 @@ const kiloPoundRate = 2.204;
 let unit1 = "";
 let unit2 = "";
 
-inputEl.addEventListener("input", function () {
-  this.style.width = this.value.length + "ch";
-});
-
-dInputEl.addEventListener("input", function () {
-  this.style.width = this.value.length + "ch";
-});
-
 btn.addEventListener("click", function () {
   const val = Number(inputEl.value);
   if (!val) {
