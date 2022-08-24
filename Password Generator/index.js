@@ -39,11 +39,13 @@ function generate() {
 
 function printPass() {
   generate();
-  let passString = "";
+  let passString1 = "";
+  let passString2 = "";
   for (let i = 0; i < passLength; i++) {
-    passString += pass[Math.floor(Math.random() * pass.length)];
+    passString1 += pass[Math.floor(Math.random() * pass.length)];
+    passString2 += pass[Math.floor(Math.random() * pass.length)];
   }
-  firstPass.textContent = passString;
-  secondPass.textContent = passString;
+  firstPass.textContent = passString1;
+  secondPass.textContent = passString2;
   pass = [];
 }
