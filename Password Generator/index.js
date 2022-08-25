@@ -1,11 +1,9 @@
-const firstPass = document.getElementById("first-pass");
-const secondPass = document.getElementById("second-pass");
 const upperCase = document.getElementById("uppercase-choice");
 const lowerCase = document.getElementById("lowercase-choice");
 const numbers = document.getElementById("numbers-choice");
 const symbols = document.getElementById("symbols-choice");
 let passLength = 15;
-let pass = [];
+let charOfArray = [];
 let checkBoxes = [
   { type: upperCase, possibilities: 26, startPoint: 65 },
   { type: lowerCase, possibilities: 26, startPoint: 97 },
@@ -16,36 +14,43 @@ let checkBoxes = [
   { type: symbols, possibilities: 4, startPoint: 123 },
 ];
 
-function cases(availability, charCode) {
+function charRendering(availability, charCode) {
   return String.fromCharCode(
     Math.floor(Math.random() * availability) + charCode
   );
 }
 
-function controlCheck() {
+function outcome() {
   for (let select of checkBoxes) {
     const { type, possibilities, startPoint } = select;
     if (type.checked) {
-      pass.push(cases(possibilities, startPoint));
+      charOfArray.push(charRendering(possibilities, startPoint));
     }
   }
 }
 
 function generate() {
   for (let i = 0; i < passLength; i++) {
-    controlCheck();
+    outcome();
   }
 }
 
+const sortingOfPass = () => Math.floor(Math.random() * charOfArray.length);
+
 function printPass() {
+  const requiredPassword = 2;
   generate();
-  let passString1 = "";
-  let passString2 = "";
-  for (let i = 0; i < passLength; i++) {
-    passString1 += pass[Math.floor(Math.random() * pass.length)];
-    passString2 += pass[Math.floor(Math.random() * pass.length)];
+   if (charOfArray.length) {
+    let passString = "";
+    for (let n = 0; n < requiredPassword; n++) {
+      for (let i = 0; i < passLength; i++) {
+        passString += charOfArray[sortingOfPass()];
+      }
+      document.querySelector(`#password-${n + 1}`).textContent = passString;
+      passString = "";
+    }
+    charOfArray = [];
+   } else {
+    alert("Please select at least one checkbox");
   }
-  firstPass.textContent = passString1;
-  secondPass.textContent = passString2;
-  pass = [];
 }
